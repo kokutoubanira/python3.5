@@ -1,0 +1,23 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "Python 3.5",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"appPort": [
+        8888
+    ],
+    //"postCreateCommand": "pipenv run init",
+    "extensions": [
+        "ms-python.python",
+        "bungcip.better-toml"
+    ],
+    "settings": {
+        "python.linting.pylintEnabled": false,
+        "python.linting.enabled": false
+    },
+    "runArgs": [
+        "-v",
+        "${env:HOME}/.jupyter:/root/.jupyter:rw"
+	]
+}
+	
